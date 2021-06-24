@@ -5,6 +5,7 @@
   "type": "Full App",
   "contributed_by": "Community",
   "repo_url": "https://github.com/redis-developer/logub",
+  "quick_deploy": "true",
   "deploy_buttons": [
         {
             "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/logub.git" 
