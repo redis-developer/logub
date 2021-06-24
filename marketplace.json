@@ -5,6 +5,15 @@
   "type": "Full App",
   "contributed_by": "Community",
   "repo_url": "https://github.com/redis-developer/logub",
+  "deploy_buttons": [
+        {
+            "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/logub.git" 
+        },
+        {
+            "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/logub.git" 
+        }
+    ],
+  
   "language": ["Java", "Javascript"],
   "redis_features": ["storing", "searching", "indexing"],
   "redis_modules": ["RediSearch"],
