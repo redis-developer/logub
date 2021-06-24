@@ -1,20 +1,19 @@
 {
   "app_name": "Logub",
-  "description": "Logub is an application to collect, explore and analyze application logs. Proudly powered by Redis and RediSearch.",
-  "hidden": "true",
-  "rank": "21",
+  "description": "Logub is an application to collect, explore and analyze application logs using RediSearch.",
+  "rank": "79",
   "type": "Full App",
   "contributed_by": "Community",
-  "repo_url": "https://github.com/Logub/logub",
+  "repo_url": "https://github.com/redis-developer/logub",
   "language": ["Java", "Javascript"],
   "redis_features": ["storing", "searching", "indexing"],
   "redis_modules": ["RediSearch"],
   "app_image_urls": [
-    "https://github.com/Logub/logub/blob/main/images/home-advanced-filter.png?raw=true",
-    "https://github.com/Logub/logub/blob/main/images/log-details-popup.png?raw=true"
+    "https://github.com/redis-developer/logub/blob/main/images/home-advanced-filter.png?raw=true",
+    "https://github.com/redis-developer/logub/blob/main/images/log-details-popup.png?raw=true"
   ],
   "youtube_url": "https://www.youtube.com/watch?v=SQXpUkSwwPM",
   "special_tags": ["Hackathon"],
   "verticals": ["Technology"],
-  "markdown": "https://raw.githubusercontent.com/Logub/logub/main/README.md"
+  "markdown": "https://raw.githubusercontent.com/redis-developer/logub/main/README.md"
 }
