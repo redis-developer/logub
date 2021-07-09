@@ -17,7 +17,7 @@
         }
     ],
   "language": ["Java", "Javascript"],
-  "redis_features": ["storing", "searching", "indexing"],
+  "redis_features": [],
   "redis_modules": ["RediSearch"],
   "app_image_urls": [
     "https://github.com/redis-developer/logub/blob/main/images/home-advanced-filter.png?raw=true",
