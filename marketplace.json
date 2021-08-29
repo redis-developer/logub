@@ -1,7 +1,7 @@
 {
   "app_name": "Logub",
   "description": "Logub is an application to collect, explore and analyze application logs using RediSearch",
-  "rank": "83",
+  "rank": 83,
   "type": "Full App",
   "contributed_by": "Community",
   "repo_url": "https://github.com/redis-developer/logub",
