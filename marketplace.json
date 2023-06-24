@@ -1,6 +1,6 @@
 {
   "app_name": "Logub",
-  "description": "Logub is an application to collect, explore and analyze application logs using RediSearch",
+  "description": "Logub is an application to collect, explore and analyze application logs using Redis Search",
   "rank": 83,
   "type": "Full App",
   "contributed_by": "Community",
@@ -18,8 +18,8 @@
         }
     ],
   "language": ["Java", "Javascript"],
-  "redis_features": [],
-  "redis_modules": ["RediSearch"],
+  "redis_use_cases": [],
+  "redis_features": ["Search and Query"],
   "app_image_urls": [
     "https://github.com/redis-developer/logub/blob/main/images/home-advanced-filter.png?raw=true",
     "https://github.com/redis-developer/logub/blob/main/images/log-details-popup.png?raw=true"
