@@ -1,7 +1,7 @@
 # Logub
 
 Logub is an application to collect, explore and analyze application logs.
-Proudly powered by Redis for log storage and RediSearch for the exploration and analysis part.
+Proudly powered by Redis for log storage andRedis Searchfor the exploration and analysis part.
 
 ![Alt text](https://github.com/Logub/logub/blob/main/images/home-with-env-filter.png?raw=true "Home Logub")
 
@@ -18,7 +18,7 @@ Logub Architecture Diagram :
 
 ## How it works?
 
-Logub use [Fluentd](https://www.fluentd.org) to collect, format, and send logs to Redis. The Logub backend then allows to interact with the logs, to do a full-text search, and to index some fields defined by the user (with RediSearch).
+Logub use [Fluentd](https://www.fluentd.org) to collect, format, and send logs to Redis. The Logub backend then allows to interact with the logs, to do a full-text search, and to index some fields defined by the user (with Redis Search).
 
 ### How data are stored?
 
@@ -169,7 +169,7 @@ public class LogSearch {
 }
 ```
 
-This is the object which allows us to create a plain text RediSearch query based on the user input. As you can see we create our own (small) QueryBuilders on the top of the JRedisSearch Libary. It's this object that will be sent by Logub UI to make a powerful search in your logs.
+This is the object which allows us to create a plain textRedis Searchquery based on the user input. As you can see we create our own (small) QueryBuilders on the top of the JRedis Search Libary. It's this object that will be sent by Logub UI to make a powerful search in your logs.
 <br/>
 <br/>
 
@@ -208,7 +208,7 @@ The demo page allows you :
 If you return to the main page, you can try to search for the logs you have generated !
 
 **WARNING: There is a latency of about 1 minute between the production of a log in a container and its display in Logub. This latency is due to the process of collecting, formatting, and ingesting the logs into the database.**
-### How work the search bar ? 
+### How work the search bar ?
 You can do search by tag or full-text search, here are some example :
 
 - `env:dev Ut ea vero voluptate*` will search all logs in the dev environnement with a message that start with  `Ut ea vero voluptate`
@@ -225,7 +225,7 @@ You can integrate Logub into your project. For now, Logub is only available in D
 You will need four Docker images :
 
 - Logub fluentd image to collect and send logs to Redis - [Logub Fluentd Image](https://hub.docker.com/r/logub/logub-fluentd)
-- Redis image with RediSearch module [Redis Mod Image](https://hub.docker.com/r/redislabs/redismod)
+- Redis image withRedis Search [Redis Mod Image](https://hub.docker.com/r/redislabs/redismod)
 - Logub controller image to serve log exploring functionnalities - [Logub Contoller Image](https://hub.docker.com/r/logub/logub-controller)
 - Logub UI to explore and query logs - [Logub UI Image](https://hub.docker.com/r/logub/logub-ui)
 
@@ -317,12 +317,12 @@ Configuration example for custom integration :
 
 ### Redis Search
 
-Logub uses the functionality of RediSearch to process application logs. When logs are persisted in the Redis database, they are accompanied by 3 types of fields.
+Logub uses the functionality ofRedis Searchto process application logs. When logs are persisted in the Redis database, they are accompanied by 3 types of fields.
 
 - SystemProperties are information that Docker & Fluentd gives us when sending the logs, like the environment, the container name, and many others.
 - BasicProperties which are the basic information that a log have (eg: timestamp, level, service, loggerName, or the message)
 
-These properties are automatically indexed in RedisSearch.
+These properties are automatically indexed in Redis Search.
 
 - Business properties are given by the user of Logub in a specific field. The user has to respect a Key - Value (Map) format.
   We use the dynamic index of Redis search to allow the user to index these "business properties" if he wants to do some research on it. <br/>
